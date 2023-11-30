@@ -1,13 +1,6 @@
 const express = require("express");
 const productController = require("../../controllers/product.controller");
-const uploader = require("../../middleware/uploader");
 const router = express.Router();
-
-router.post(
-  "/file-upload",
-  uploader.single("image"),
-  productController.fileUpload
-);
 
 router
   .route("/:id")

@@ -81,15 +81,3 @@ module.exports.getProductById = async (req, res) => {
     });
   }
 };
-
-exports.fileUpload = (req, res) => {
-  try {
-    res.status(200).json(req.file);
-  } catch (error) {
-    res.status(400).json({
-      stauts: "fail",
-      message: "File upload failed",
-      error: error.message,
-    });
-  }
-};
