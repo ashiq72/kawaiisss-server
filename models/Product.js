@@ -14,7 +14,7 @@ const productSchema = mongoose.Schema(
     },
     orginalPrice: {
       type: Number,
-      // required: true,
+      required: true,
     },
     discountPrice: {
       type: Number,
@@ -46,7 +46,7 @@ const productSchema = mongoose.Schema(
     // },
     size: {
       type: Array,
-      // required: true,
+      required: true,
       // enum: {
       //   values: ["XS", "S", "M", "L", "XL"],
       //   message: "Unit value can't be {Value}, must be kg/litre/pcs",
@@ -127,7 +127,7 @@ const productSchema = mongoose.Schema(
     },
     category: {
       type: String,
-      //  required: true
+      required: true,
     },
     status: {
       type: String,
