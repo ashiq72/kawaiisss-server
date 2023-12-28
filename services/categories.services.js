@@ -1,6 +1,7 @@
 const Categories = require("../models/Categories");
 
 exports.getCategoriesService = async (query) => {
+  console.log(query);
   const products = await Categories.find({});
   return products;
 };

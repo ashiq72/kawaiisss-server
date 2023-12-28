@@ -5,19 +5,19 @@ const cors = require("cors");
 //middleware
 app.use(express.json());
 app.use(cors());
+app.use(express.urlencoded({ extended: true }));
 
 // routers
 const productRoute = require("./routes/v1/product.route");
+const userRoute = require("./routes/v1/user.route");
 const categoriesRoute = require("./routes/v1/categories.route");
 
 app.use("/api/v1/product", productRoute);
+app.use("/api/v1/user", userRoute);
 app.use("/api/v1/categories", categoriesRoute);
 
 app.get("/", (req, res) => {
   res.send("Route is working! YaY!");
-});
-app.get("/about", (req, res) => {
-  res.send("About is working!");
 });
 
 module.exports = app;
