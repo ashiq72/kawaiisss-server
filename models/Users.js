@@ -1,36 +1,35 @@
 const mongoose = require("mongoose");
 const userSchema = mongoose.Schema(
   {
-    firstName: {
+    name: {
       type: String,
       trim: true,
-      required: [true, "Please provide a first name"],
-    },
-    lastName: {
-      type: String,
-      trim: true,
-      required: [true, "Please provide a last name"],
     },
     email: {
       type: String,
       trim: true,
       required: [true, "Please provide a email"],
       unique: true,
-      // lowerCase: true,
     },
-    phone: {
+    password: {
       type: String,
       trim: true,
-      required: [true, "Please provide a phone number"],
+    },
+    password_confirmation: {
+      type: String,
+      trim: true,
+    },
+    phone: {
+      type: Number,
+      trim: true,
       unique: true,
     },
     gender: {
       type: String,
       trim: true,
-      // lowerCase: true,
     },
     birth: {
-      type: Date,
+      type: String,
     },
     billingAddress: {
       type: String,
